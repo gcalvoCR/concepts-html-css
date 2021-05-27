@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.header{
+    outline: 1px solid gold;
+    height: 3rem;
+}
+
+.container{
+    display: flex;
+    height: inherit;
+}
+
+.content{
+    outline: 1px solid cyan;
+    /* todo el ancho disponible */
+    flex: 1; 
+}
+
+.aside{
+    outline: 1px solid magenta;
+    /* flex: flex-grow glex-shrink flexbasis; */
+    flex: 0 0 25%
+}
+
+.footer{
+    /* #outline es un borde que se dibuja por fuera 
+    y no ocupa espacio */
+    outline: 1px solid salmon;
+    height: 6rem;
+    margin-top: auto;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-item{
+    list-style: none;
+    outline: 1px solid red;
+    flex: 1;
+    /* para que los elementos tengan la misma altuar del padre */
+    line-height: 3rem;
+    text-align: center;
+    transition: flex .5s;
+}
+
+.menu-item:hover{
+    flex: 8;
+
+}
